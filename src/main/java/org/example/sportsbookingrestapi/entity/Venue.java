@@ -2,6 +2,7 @@ package org.example.sportsbookingrestapi.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 @Entity
 @Table(name = "venues")
@@ -10,6 +11,7 @@ public class Venue {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @EqualsAndHashCode.Include
     private Long venueId;
 
     @Column(nullable = false)
